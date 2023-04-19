@@ -24,27 +24,27 @@ print(f"четвёртый шрифт-{quarter_shrift}")
 half_length = length//2
 fifth_shrift = message[half_length:] + message[:half_length]
 print(f"пятый шрифт-{fifth_shrift}")
-rash_shrift_one = first_shifr.replace('т','а')
-rash_shrift_one = rash_shrift_one.replace('е','в')
-rash_shrift_one = rash_shrift_one.replace('р','т')
-rash_shrift_one = rash_shrift_one.replace('т','к')
-rash_shrift_one = rash_shrift_one.replace('х','о')
-print(f"расшифровока 1 шрифта-{rash_shrift_one}")
-rash_shrift_two = second_shifr[::-1]
-print(f"расшифровока 2 шрифта-{rash_shrift_two}")
-rash_shrift_three = ""
+decipher_one = first_shifr.replace('т','а')
+decipher_one = decipher_one.replace('е','в')
+decipher_one = decipher_one.replace('р','т')
+decipher_one = decipher_one.replace('т','к')
+decipher_one = decipher_one.replace('х','о')
+print(f"расшифровока 1 шрифта-{decipher_one}")
+decipher_two = second_shifr[::-1]
+print(f"расшифровока 2 шрифта-{decipher_two}")
+decipher_three = ""
 if length%2 == 1:
     half_length+=1
-tmp_string1 = third_shifr [:half_length]
-tmp_string2 = third_shifr [half_length:]
-for symbol in range(len(tmp_string1)):
-    rash_shrift_three += tmp_string1[symbol]
-    if symbol < len(tmp_string2):
-        rash_shrift_three += tmp_string2[symbol]
-print(f"расшифровока 3 шрифта-{rash_shrift_three}")
+tmp_string_one = third_shifr[:half_length]
+tmp_string_two = third_shifr[half_length:]
+for symbol in range(len(tmp_string_one)):
+    decipher_three += tmp_string_one[symbol]
+    if symbol < len(tmp_string_two):
+        decipher_three += tmp_string_two[symbol]
+print(f"расшифровока 3 шрифта-{decipher_three}")
 first_letter = quarter_shrift[0]
 last_letter = quarter_shrift[-1]
-rash_shrift_four = last_letter + quarter_shrift[1:length-1] + first_letter
-print(f"расшифровока 4 шрифта-{rash_shrift_four}")
-rash_shrift_five = fifth_shrift[half_length:] + fifth_shrift[:half_length]
-print(f"расшифровока 5 шрифта-{rash_shrift_five}")
+decipher_four = last_letter + quarter_shrift[1:length-1] + first_letter
+print(f"расшифровока 4 шрифта-{decipher_four}")
+decipher_five = fifth_shrift[half_length:] + fifth_shrift[:half_length]
+print(f"расшифровока 5 шрифта-{decipher_five}")
